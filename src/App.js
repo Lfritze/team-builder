@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Form from './components/Form'
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      Initial Commit
+      <Form addPerson={addPerson} />
     </div>
   );
 }
