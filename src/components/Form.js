@@ -12,7 +12,7 @@ export default function Form(props) {
 
     const submitForm = event => {
         event.preventDefault();
-        props.addMember(member);
+        props.addPerson(member);
         setMember({
             name: "", 
             email: "", 

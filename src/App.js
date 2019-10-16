@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Form from './components/Form'
-// import TeamList from './components/TeamList';
+import TeamList from './components/TeamList';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <Form addPerson={addPerson} />
+      <TeamList myTeam={myTeam} />
     </div>
   );
 }
