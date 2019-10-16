@@ -2,13 +2,18 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 
 const NewMemberButton = styled.button`
-background: teal;
-border-radius: 10px;
-border: 2px solid green;
-color: white;
-margin: 0 auto;
-margin-top: 5%;
-padding: 0.25em 1em;
+    background: teal;
+    border-radius: 10px;
+    border: 2px solid green;
+    color: white;
+    margin-top: 5%;
+    padding: 0.25em 1em;
+`;
+
+const NameBox = styled.input`
+    border-radius: 5px;
+    margin-bottom: 2%;
+    padding: 0.25%;
 `;
 
 export default function Form(props){
@@ -37,24 +42,27 @@ export default function Form(props){
     }
     console.log('member', member);
     return(
+        
         <form onSubmit={submitForm}>
-            <div>
+            
                 <label htmlFor="name">Name:</label>
-                <input 
+                <NameBox 
                 id="name"
                 name="name"
                 type="text"
+                placeholder="Name"
                 value={member.name}
                 onChange={handleChanges}/>
-            </div>
+            
 
             <div>
                 <label htmlFor="email">Email:</label>
-                <input 
+                <NameBox 
                 id="email"
                 name="email"
                 value={member.email}
                 type="email"
+                placeholder="Email"
                 onChange={handleChanges}/>
             </div>
 
