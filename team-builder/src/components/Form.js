@@ -1,4 +1,15 @@
 import React, {useState} from 'react'
+import styled from 'styled-components'
+
+const NewMemberButton = styled.button`
+background: teal;
+border-radius: 10px;
+border: 2px solid green;
+color: white;
+margin: 0 auto;
+margin-top: 5%;
+padding: 0.25em 1em;
+`;
 
 export default function Form(props){
 
@@ -59,8 +70,9 @@ export default function Form(props){
                     <option value="Ux-Designer">UX Designer</option>
                 </select>
             </div>
-
-            <button type="submit">Add New Team Member</button>
+            <NewMemberButton type="submit">
+            Add New Team Member
+            </NewMemberButton>
          </form>    
     )
 }
