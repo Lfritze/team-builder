@@ -6,11 +6,18 @@ const NewMemberButton = styled.button`
     border-radius: 10px;
     border: 2px solid green;
     color: white;
-    margin-top: 5%;
+    margin-top: 1%;
     padding: 0.25em 1em;
+    height: 50px;
 `;
 
 const NameBox = styled.input`
+    border-radius: 5px;
+    margin-bottom: 2%;
+    padding: 0.25%;
+`;
+
+const RoleSelect = styled.select`
     border-radius: 5px;
     margin-bottom: 2%;
     padding: 0.25%;
@@ -68,7 +75,7 @@ export default function Form(props){
 
             <div>
                 <label htmlFor="role">Role:</label>
-                <select id="role" name="role" value={member.role} onChange={handleChanges}>
+                <RoleSelect id="role" name="role" value={member.role} onChange={handleChanges}>
                     <option value="0" onChange={handleChanges}></option>
                     <option value="Project-Manager">Project Manager</option>
                     <option value="Frontend-Developer">Frontend Developer</option>
@@ -76,7 +83,7 @@ export default function Form(props){
                     <option value="Data-Scientist">Data Scientist</option>
                     <option value="Logistics-Coordinator">Logistics Coordinator</option>
                     <option value="Ux-Designer">UX Designer</option>
-                </select>
+                </RoleSelect>
             </div>
             <NewMemberButton type="submit">
             Add New Team Member
